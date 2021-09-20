@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nahuel Gómez</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/34beaa5fa5.js" crossorigin="anonymous"></script>
     <!-- Style | Incrusté el .css en el HTML para poder mantener un órden en las carpetas de las entregas. Obviamente que también preferiría tenerlo en un archivo externo. -->
     <style>
       * {
@@ -31,10 +33,18 @@
       .texto__principal h1 {
         font-size: 3rem;
       }
+      .texto__principal .github {
+        font-weight: 700;
+        border: 2px solid black;
+        padding: 0.6rem;
+      }
+      .texto__principal .github:hover {
+        text-decoration: underline;
+      }
       .texto__principal .texto__principal__desafios nav ul {
         width: 80%;
         margin: 0 auto;
-        padding: 1rem;
+        padding-bottom: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -60,6 +70,8 @@
             <li><a href="02. Desafío/index.html">Desafío Clase 2</a></li>
           </ul>
         </nav>
+        <a href="https://github.com/almanoduerme/nahuelgomez" target="_blank" class="github"><i class="fab fa-github"></i> Repositorio GitHub</a>
+
       </div>
     </div>
   </body>
