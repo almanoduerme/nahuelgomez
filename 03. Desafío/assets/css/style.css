@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+div {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  background-color: rgb(50, 53, 53);
+  color: white;
+  text-align: center;
+}
+
+div h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+div h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+}
+
+div p {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+div a {
+  width: 50%;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+}
+
+div a:hover {
+  text-decoration: underline;
+}
+
+/* MQ MW-768px */
+@media screen and (max-width: 768px) {
+  div {
+    width: 100%;
+  }
+  div h1 {
+    font-size: 2rem;
+  }
+  div p {
+    width: 86%;
+  }
+}

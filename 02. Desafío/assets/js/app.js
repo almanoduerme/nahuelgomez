@@ -8,3 +8,4 @@ if (userAge >= 18 && userAge <= 44) {
 } else {
   alert(`¡Hola ${username}. Tenes ${userAge} años. ¡No podes entrar al bar!`);
 }
+
