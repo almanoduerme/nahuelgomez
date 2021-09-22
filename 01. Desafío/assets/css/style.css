@@ -70,13 +70,19 @@
 
 /* MQ MW-768px */
 @media screen and (max-width: 768px) {
-  div {
+  .container__consigna {
     width: 100%;
   }
-  div h1 {
+  .container__consigna h1 {
     font-size: 2rem;
   }
-  div p {
+  .container__consigna p {
     width: 86%;
+  }
+  .container__consigna .container__links {
+    width: 100%;
+  }
+  .container__consigna .container__links .github {
+    width: 54%;
   }
 }
