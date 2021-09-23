@@ -1,26 +1,20 @@
-// VARIABLE GLOBAL
-let opcion = prompt("¿Desea ver un producto?").toLowerCase();
+// Bienvenida
+alert("Bienvenido a la tienda de tus sueños. Elegí 5 productos gratis.");
 
-// ARRAY
-const productos = ["Guitarra", "Bajo", "Batería", "Teclado"];
+// Ciclo for
+for (let i = 1; i < 6; i++) {
+  // Ingresa un valor
+  let producto = prompt(`Ingresá el producto N° ${i}.`);
 
-if (opcion == "si" && opcion != "" && opcion != NaN) {
-  for (let i = 0; i < productos.length; i++) {
-    alert(productos[i]);
-    let moreProducts = prompt("¿Desea ver otro producto?").toLowerCase();
-    if (moreProducts == "no") {
-      alert("Gracias por tu visita.");
-      break;
-    }
+  // Alerta muestra el producto ingresado
+  alert(`El producto N° ${i} es ${producto}.`);
+
+  // Lo mando a la consola para graficar todos los instrumentos ingresados
+  console.log(`El producto N° ${i} es ${producto}.`);
+
+  if (i == 5) {
+    alert(
+      "Los productos estarán llegan a tu casa dentro de los primeros 5 días hábiles."
+    );
   }
-} else if (parseFloat(opcion)) {
-  alert("Es un numero. Tenes que responder SI o NO. Empecemos de vuelta");
-  window.location.reload();
-} else if (opcion === ' ') {
-  alert("Es un espacio vacio. Empecemos de vuelta");
-  window.location.reload();
-} else {
-  alert('Gracias por visitarnos.')
 }
-
-// Ver como validar caracteres especiales
