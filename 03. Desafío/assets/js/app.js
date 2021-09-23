@@ -1,5 +1,3 @@
-
-// var opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
 var opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
 
 if (opcion === ' ' || opcion == parseFloat(opcion)) {
@@ -13,7 +11,7 @@ while (opcion != "exit") {
     alert('Operación inválida');
     window.location.reload();
   }
-  
+
   let numeroUno = parseInt(prompt("Un numero"));
   let numeroDos = parseInt(prompt("Otro numero"));
 
