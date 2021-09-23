@@ -1,20 +1,28 @@
-// Bienvenida
-alert("Bienvenido a la tienda de tus sueños. Elegí 5 productos gratis.");
 
-// Ciclo for
-for (let i = 1; i < 6; i++) {
-  // Ingresa un valor
-  let producto = prompt(`Ingresá el producto N° ${i}.`);
+var opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
 
-  // Alerta muestra el producto ingresado
-  alert(`El producto N° ${i} es ${producto}.`);
+while (opcion != "exit") {
+  let numeroUno = parseInt(prompt("Un numero"));
+  let numeroDos = parseInt(prompt("Otro numero"));
 
-  // Lo mando a la consola para graficar todos los instrumentos ingresados
-  console.log(`El producto N° ${i} es ${producto}.`);
-
-  if (i == 5) {
-    alert(
-      "Los productos estarán llegan a tu casa dentro de los primeros 5 días hábiles."
-    );
+  if (opcion == "sumar") {
+    resultado = numeroUno + numeroDos;
+    alert(`El resultado de la suma es ${resultado}`);
+    opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
+  } else if (opcion == "restar") {
+    resultado = numeroUno - numeroDos;
+    alert(`El resultado de la resta es ${resultado}`);
+    opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
+  } else if (opcion == "multiplicar") {
+    resultado = numeroUno * numeroDos;
+    alert(`El resultado de la multiplicación es ${resultado}`);
+    opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
+  } else if (opcion == "dividir") {
+    resultado = numeroUno / numeroDos;
+    alert(`El resultado de la división es ${resultado}`);
+    opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
+  } else {
+    alert("No indicaste una operación válida.");
+    opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
   }
 }
