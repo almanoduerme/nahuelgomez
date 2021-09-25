@@ -42,3 +42,5 @@ while (opcion != "exit") {
     opcion = prompt("¿Querés sumar, restar, multiplicar o dividir? ESCRIBE 'EXIT' PARA SALIR.").toLowerCase();
   }
 }
+
+

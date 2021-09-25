@@ -4,4 +4,4 @@ let yearOfBirth = prompt("Ingrese su año de nacimiento");
 let currentYear = prompt("Ingrese el año actual");
 let age = parseInt(currentYear) - parseInt(yearOfBirth);
 
-alert(`¡BIenvenido ${name} ${surname}! Usted tiene ${age} años.`);
+alert(`¡BIenvenido ${name} ${surname}! Usted tiene ${age} años.`); 
