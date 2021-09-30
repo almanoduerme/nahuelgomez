@@ -1,17 +1,22 @@
-// Los alumnos tuvieron 3 parciales. Esta aplicación se encarga de sacar el promedio de los parciales realizados.
+// FUNCIONES RELACIONADAS
+
+// Esta aplicación se encarga de sacar el promedio de los parciales realizados.
 
 // Función que da comienzo a la aplicación.
-function start() {alert("¡Hola! Averigüemos la nota final del alumno.");
+function start() {
+  alert("¡Hola! Averigüemos la nota final del alumno.");
   const cantidadDeParciales = Number(prompt("¿Cuántos parciales tuvo el alumno?"));
 
-  if (cantidadDeParciales < 1) {
-    alert("Número inválido");
+  if (cantidadDeParciales < 1 || cantidadDeParciales === " ") {
+    alert("Caracter inválido");
+    location.reload();
+  } else if (cantidadDeParciales >= 1 || cantidadDeParciales <= 10) {
+    const resultadoFinal = sacarResultado(Number(cantidadDeParciales));
+    respuestaFinal(resultadoFinal);
+  } else {
+    alert("Caracter inválido");
     location.reload();
   }
-
-  const resultadoFinal = sacarResultado(Number(cantidadDeParciales));
-
-  respuestaFinal(resultadoFinal);
 }
 
 // Función que se encarga de mostrar el resultado según la cantidad de parciales realizados.
@@ -53,7 +58,7 @@ function respuestaFinal(resultado) {
       break;
     default:
       alert(
-        `La nota es un ${resultado}. El alumno es  horrible. ¡Que se dedique a otra cosa!`
+        `La nota es un ${resultado}. El alumno es horrible. ¡Que se dedique a otra cosa!`
       );
       break;
   }
