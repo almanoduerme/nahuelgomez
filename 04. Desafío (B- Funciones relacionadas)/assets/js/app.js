@@ -24,7 +24,7 @@ function start() {
     let sumaTotalParciales = 0;
     for (let i = 0; i < numeroDeParciales; i++) {
       let notaParcial = Number(prompt(`Ingrese la nota del parcial N° ${i + 1}`));
-      while (notaParcial > 10 || notaParcial < 1) {
+      while (notaParcial > 10 || notaParcial < 1 || notaParcial != parseInt(notaParcial) ) {
         alert("Número de nota no válido, tiene que ser un valor entre 1 y 10");
         notaParcial = Number(prompt(`Ingrese nuevamente la nota del parcial N° ${i + 1}`));
       }
