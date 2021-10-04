@@ -39,28 +39,23 @@ function start() {
   function respuestaFinal(resultado) {
     switch (resultado) {
       case 10:
-        alert(
-          `La nota es un ${resultado}. ¡El alumno tiene la mejor nota de la cursada!`
-        );
+        alert(`La nota es un ${resultado}. ¡El alumno tiene la mejor nota de la cursada!`);
         break;
       case 9:
       case 8:
       case 7:
-        alert(
-          `La nota es un ${resultado}. El alumno aprobó pero no tiene la mejor nota.`
-        );
+        alert(`La nota es un ${resultado}. El alumno aprobó pero no tiene la mejor nota.`);
         break;
       case 6:
       case 5:
         alert(`La nota es un ${resultado}. El alumno casi aprueba.`);
         break;
       default:
-        alert(
-          `La nota es un ${resultado}. El alumno es horrible. ¡Que se dedique a otra cosa!`
-        );
+        alert(`La nota es un ${resultado}. El alumno es horrible. ¡Que se dedique a otra cosa!`);
         break;
     }
   }
   
+  // Damos inicio
   start();
   
