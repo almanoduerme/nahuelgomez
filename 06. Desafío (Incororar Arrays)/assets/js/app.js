@@ -38,14 +38,23 @@ function publicarTweet() {
   let tweet = prompt("Ingrese su tweet");
 
   let tweets = new Tweets(tweet);
-  return tuitASumar = tweets.tweet;
+
+  let publicarMasTweets = prompt('desea otro tweet?').toLowerCase();
+  tuitASumar = tweets; //.tweet => Para que devuelva el valor del objeto.
+  todosLosTweets.push(tuitASumar);
+
+  if(publicarMasTweets == 'si') {
+    publicarTweet()
+  } else if(publicarMasTweets == 'no') {
+    alert('no mas tweets');
+  } else {
+    alert('numeros');
+  }
 }
 
-// Función que da inicio al registro de usuario.
-registrarUsuario();
-
-// Se pushean los tweets al Array (todosLosTweets)
-todosLosTweets.push(tuitASumar);
 console.log(todosLosTweets);
 
 
+
+// Función que da inicio al registro de usuario.
+registrarUsuario();
