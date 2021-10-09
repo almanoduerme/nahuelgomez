@@ -10,6 +10,7 @@ class Tweets {
   constructor(tweet) {
     this.tweet = tweet;
   }
+
 }
 
 // FUNCIONES
@@ -52,9 +53,18 @@ function publicarTweet() {
   }
 }
 
-console.log(todosLosTweets);
+// Función que elimina el último tweet.
+function eliminarUltimoTweet(todosLosTweets){
+  let opcionEliminar = prompt('¿Desea eliminar el último tweet?')
 
-
+  if(opcionEliminar == 'si') {
+    todosLosTweets.pop();
+  }
+}
 
 // Función que da inicio al registro de usuario.
 registrarUsuario();
+eliminarUltimoTweet(todosLosTweets);
+
+// Se muestran el Array.
+console.log(todosLosTweets);

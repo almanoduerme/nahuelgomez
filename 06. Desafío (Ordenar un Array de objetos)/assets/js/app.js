@@ -1,29 +1,74 @@
-// class crearUsuario {
-//   constructor(nombreUsuario, mailUsuario, passUsuario) {
-//     this.nombreCuenta = nombreUsuario;
-//     this.mailCuenta = mailUsuario;
-//     this.passCuenta = passUsuario;
-//   }
+// VARIABLES GLOBALES
 
-//   mostrarCuenta = function () {
-//     let msg = `Hola ${this.nombreCuenta}. Su cuenta se ha creado correctamente.`;
-//     let msg2 = `Su correo electrónico es: ${this.mailCuenta} y su contraseña es ${this.passCuenta}`;
+// ARRAYS
 
-//     alert(msg);
-//     alert(msg2);
-//   };
-// }
+let todosLosTweets = [];
 
-// Crear la cuenta del usuario
-// function crearCuentaUsuario() {
-//   alert("Vamos a simular un registro de usuario en la aplicación");
+// OBJECTS
 
-//   let nombre = prompt("Introduzca su nombre y apellido");
-//   let mail = prompt("Introduzca su correo electrónico");
-//   let pass = prompt("Introduzca su contraseña");
+class Tweets {
+  constructor(tweet) {
+    this.tweet = tweet;
+  }
+}
 
-//   let cuentaUsuario = new crearUsuario(nombre, mail, pass);
-//   cuentaUsuario.mostrarCuenta();
-// }
+// FUNCIONES
 
-// crearCuentaUsuario();
+// Función que registra al usuario.
+function registrarUsuario() {
+  let nombreUsuario = prompt("Ingrese su nombre");
+  let edadUsuario = Number(prompt("Ingrese su edad"));
+  let correoUsuario = prompt("Ingrese su correo electrónico");
+  let pwUsuario = prompt("Ingrese su contraseña");
+
+  // Se llama a la función para saludar al usuario
+  saludarUsuario(nombreUsuario, edadUsuario, correoUsuario, pwUsuario);
+}
+
+// Función que saluda al usuario y muestra sus datos.
+function saludarUsuario(nombre, edad, correo, pw) {
+  alert(`Bienvenido a Twitter ${nombre}. Usted tiene ${edad} años. Su correo electrónico es ${correo} y su contraseña es ${pw}.`);
+
+  // Se llama a la función para publicar el primer tweet y mostrarlo en consola.
+  publicarTweet();
+}
+
+// Función que se utiliza para pedir el tweet y transformarlo en un objeto.
+function publicarTweet() {
+  let tweet = prompt("Ingrese su tweet");
+
+  let tweets = new Tweets(tweet);
+
+  let publicarMasTweets = prompt("desea otro tweet?").toLowerCase();
+  tuitASumar = tweets.tweet; //.tweet => Para que devuelva el valor del objeto.
+  todosLosTweets.push(tuitASumar);
+
+  if (publicarMasTweets == "si") {
+    publicarTweet();
+  } else if (publicarMasTweets == "no") {
+    alert("no mas tweets");
+  } else {
+    alert("numeros");
+  }
+}
+
+// Función que elimina el último tweet.
+function eliminarUltimoTweet(todosLosTweets) {
+  let opcionEliminar = prompt("¿Desea eliminar el último tweet?");
+
+  if (opcionEliminar == "si") {
+    todosLosTweets.pop();
+  }
+}
+
+// Ordenar el array
+function ordenarArray(todosLosTweets) {
+  todosLosTweets.values();
+  todosLosTweets.sort();
+  console.log(todosLosTweets);
+}
+
+// Función que da inicio al registro de usuario.
+registrarUsuario();
+eliminarUltimoTweet(todosLosTweets);
+ordenarArray(todosLosTweets);
