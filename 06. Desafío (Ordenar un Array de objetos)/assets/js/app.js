@@ -1,7 +1,8 @@
 // VARIABLES GLOBALES
 
-// ARRAY
+// ARRAYS
 
+// Acá se suben todos los tweets.
 let todosLosTweets = [];
 
 // OBJECTS
