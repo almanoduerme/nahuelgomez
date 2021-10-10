@@ -1,6 +1,6 @@
 // VARIABLES GLOBALES
 
-// ARRAYS
+// ARRAY
 
 let todosLosTweets = [];
 
@@ -27,7 +27,9 @@ function registrarUsuario() {
 
 // Función que saluda al usuario y muestra sus datos.
 function saludarUsuario(nombre, edad, correo, pw) {
-  alert(`Bienvenido a Twitter ${nombre}. Usted tiene ${edad} años. Su correo electrónico es ${correo} y su contraseña es ${pw}.`);
+  alert(
+    `Bienvenido a Twitter ${nombre}. Usted tiene ${edad} años. Su correo electrónico es ${correo} y su contraseña es ${pw}.`
+  );
 
   // Se llama a la función para publicar el primer tweet y mostrarlo en consola.
   publicarTweet();
@@ -39,16 +41,14 @@ function publicarTweet() {
 
   let tweets = new Tweets(tweet);
 
-  let publicarMasTweets = prompt("desea otro tweet?").toLowerCase();
+  let publicarMasTweets = prompt("¿Deseas hacer otro tweet? Responde SOLO POR SI/NO").toLowerCase();
   tuitASumar = tweets.tweet; //.tweet => Para que devuelva el valor del objeto.
   todosLosTweets.push(tuitASumar);
 
   if (publicarMasTweets == "si") {
     publicarTweet();
-  } else if (publicarMasTweets == "no") {
-    alert("no mas tweets");
   } else {
-    alert("numeros");
+    alert("no mas tweets");
   }
 }
 
@@ -61,14 +61,30 @@ function eliminarUltimoTweet(todosLosTweets) {
   }
 }
 
-// Ordenar el array
-function ordenarArray(todosLosTweets) {
-  todosLosTweets.values();
-  todosLosTweets.sort();
+function ordenarArray() {
+  alert("Ahora te voy a mostrar (por consola) el array ordenado de menor a mayor / A-Z");
+
+  // Ordenar el array 'todosLosTweets' de A-Z / 0-100.
+  todosLosTweets.sort((a, b) => {
+    if (a < b) {
+      return -1;
+    }
+
+    if (a > b) {
+      return 1;
+    }
+
+    return 0;
+  });
+
   console.log(todosLosTweets);
 }
 
 // Función que da inicio al registro de usuario.
 registrarUsuario();
+
+// Llamada a la función que elimina el último tweeet.
 eliminarUltimoTweet(todosLosTweets);
-ordenarArray(todosLosTweets);
+
+// Llamada a la función que ordena el array de menor a mayor.
+ordenarArray();
