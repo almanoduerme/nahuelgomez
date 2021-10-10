@@ -28,9 +28,7 @@ function registrarUsuario() {
 
 // Función que saluda al usuario y muestra sus datos.
 function saludarUsuario(nombre, edad, correo, pw) {
-  alert(
-    `Bienvenido a Twitter ${nombre}. Usted tiene ${edad} años. Su correo electrónico es ${correo} y su contraseña es ${pw}.`
-  );
+  alert(`Bienvenidx a Twitter ${nombre}. Usted tiene ${edad} años. Su correo electrónico es ${correo} y su contraseña es ${pw}.`);
 
   // Se llama a la función para publicar el primer tweet y mostrarlo en consola.
   publicarTweet();
@@ -49,7 +47,7 @@ function publicarTweet() {
   if (publicarMasTweets == "si") {
     publicarTweet();
   } else {
-    alert("no mas tweets");
+    alert("No mas tweets");
   }
 }
 

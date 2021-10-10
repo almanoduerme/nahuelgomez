@@ -44,12 +44,10 @@ function publicarTweet() {
   tuitASumar = tweets; //.tweet => Para que devuelva el valor del objeto.
   todosLosTweets.push(tuitASumar);
 
-  if(publicarMasTweets == 'si') {
-    publicarTweet()
-  } else if(publicarMasTweets == 'no') {
-    alert('no mas tweets');
+  if (publicarMasTweets == "si") {
+    publicarTweet();
   } else {
-    alert('numeros');
+    alert("No mas tweets");
   }
 }
 
