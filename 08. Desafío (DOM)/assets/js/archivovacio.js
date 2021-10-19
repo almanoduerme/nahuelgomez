@@ -33,7 +33,6 @@ function mostrarDatos() {
     mostrarForm.style.marginTop = '3rem';
     mostrarForm.style.display = "flex";
     mostrarForm.style.flexDirection = "column";
-    mostrarForm.appendChild(mostrarFormulario)
   }
   
   // MODAL => TERMS AND CONDITIONS
