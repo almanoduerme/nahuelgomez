@@ -281,7 +281,7 @@
       max-width: 20%;
       border: 1px solid black;
       border-radius: 50%;
-      margin-right: .6rem; }
+      margin-right: 0.6rem; }
     .profile_main .profile_section_two .division_right {
       display: flex;
       flex-direction: column;
@@ -297,4 +297,43 @@
         font-size: 1rem; }
       .profile_main .profile_section_two .division_right .profile_cuerpo_tweet {
         width: 100%;
-        font-size: .8rem; }
+        font-size: 0.8rem; }
+
+#header_form {
+  width: 100%;
+  text-align: center;
+  background-color: pink; }
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s; }
+  .modal-bg .modal {
+    position: relative;
+    background-color: white;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem; }
+    .modal-bg .modal .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-weight: bold;
+      cursor: pointer; }
+
+.bg-active {
+  visibility: visible;
+  opacity: 1; }
