@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>El Pajarito - Formulario</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" /> 
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div id="mostrarFormulario">
+      
+    </div>
+    
+    <div class="container__formulario">
+      <h1>Cree su usuario</h1>
+      <hr />
+      <div class="name-form">
+        <input type="text" id="name" class="forms" placeholder="Name" />
+      </div>
+      <div class="surname-form">
+        <input type="text" id="surname" class="forms" placeholder="Surname" />
+      </div>
+      <div class="username-form">
+        <input type="text" id="username" class="forms" placeholder="Username" />
+      </div>
+      <div class="Email-form">
+        <input type="email" id="email" class="forms" placeholder="Email" />
+      </div>
+      <div class="password-form">
+        <input type="password" id="password" class="forms" placeholder="Password" />
+      </div>
+      <div class="rpassword-form">
+        <input type="password" id="passConfirm" class="forms" placeholder="Confirm your password" />
+      </div>
+      <div class="termsandconditions-form">
+        <input type="checkbox" id="checkboxTAC">
+        <label class="termsAndConditions" for="checkboxTAC"> Terms and conditions</label>
+      </div>
+      <div class="signup-button">
+        <button id="boton" class="input-button" onclick="mostrarDatos()">Enviar</button>
+      </div>
+    </div>
+
+    <!-- MODAL => TERMS AND CONDITIONS -->
+    <div class="modal-bg">
+      <div class="modal">
+        <h2>Términos y condiciones</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, autem voluptatibus eum distinctio mollitia alias labore. Iste, voluptatibus. Ducimus pariatur corrupti sit. Dolore, atque tempora.</p>
+        <span class="modal-close">X</span>
+      </div>
+    </div>
+
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js/archivovacio.js"></script>
+  </body>
+</html>
