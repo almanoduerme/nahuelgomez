@@ -10,7 +10,7 @@ $(".fas").on("click", function () {
   $(".home_nav002").toggle();
 });
 
-// NAVBAR => HOME => OFF =>>
+// NAVBAR => HOME => OFF
 
 // HOME => TUITAH => ON
 
