@@ -1,11 +1,11 @@
 // NAVBAR => HOME => ON
 // let header = document.querySelector("#home_header");
-// let bars = document.querySelector(".fas");
+let bars = document.querySelector(".fas");
 // let nav002 = document.querySelector(".home_nav002");
 // let homeMain = document.querySelector("#homeMain");
 // let mostrar = false;
 
-// Menu burger responsive
+// Menu burger responsive con jQuery
 $(".fas").on("click", function () {
   $(".home_nav002").toggle();
 });
