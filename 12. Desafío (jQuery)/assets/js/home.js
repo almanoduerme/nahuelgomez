@@ -42,6 +42,7 @@ function mostrarTweet(objCrearTweet) {
   let deletear = document.createElement("div");
   deletear.innerHTML = "Eliminar";
   deletear.classList.add("eliminarEsteTweet");
+  deletear.style.cursor = 'pointer';
   deletear.addEventListener("click", eliminarTweet);
 
   fila.classList.add("tweet");
