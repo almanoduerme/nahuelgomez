@@ -1,11 +1,6 @@
 // NAVBAR => HOME => ON
-// let header = document.querySelector("#home_header");
-let bars = document.querySelector(".fas");
-// let nav002 = document.querySelector(".home_nav002");
-// let homeMain = document.querySelector("#homeMain");
-// let mostrar = false;
 
-// Menu burger responsive con jQuery
+// Menu burger responsive
 $(".fas").on("click", function () {
   $(".home_nav002").toggle();
 });
@@ -20,11 +15,11 @@ let btnSend = document.querySelector(".send");
 btnSend.addEventListener("click", crearTweet);
 
 function crearTweet() {
-  usuario = localStorage.getItem("userUser");
+  let escribirTweet = document.querySelector(".home_escribir_tweet");
+  if (escribirTweet.value == "") return;
+  let usuario = localStorage.getItem("userUser");
 
   loadTweets();
-
-  let escribirTweet = document.querySelector(".home_escribir_tweet");
 
   const objCrearTweet = {
     usuario: usuario,
@@ -43,10 +38,11 @@ function crearTweet() {
 function mostrarTweet(objCrearTweet) {
   let sectionTwo = document.querySelector(".home_section_two");
   let fila = document.createElement("div");
+  fila.id = objCrearTweet.id;
   let deletear = document.createElement("div");
   deletear.innerHTML = "Eliminar";
   deletear.classList.add("eliminarEsteTweet");
-  deletear.addEventListener("click", texto);
+  deletear.addEventListener("click", eliminarTweet);
 
   fila.classList.add("tweet");
   fila.innerHTML = `<p class="user">@${objCrearTweet.usuario}</p>
@@ -56,19 +52,11 @@ function mostrarTweet(objCrearTweet) {
   fila.appendChild(deletear);
 }
 
-function texto() {
-  let botonCompra = document.querySelectorAll(".eliminarEsteTweet");
-
-  for (let boton of botonCompra) {
-    boton.addEventListener("click", eliminarTweet);
-  }
-}
-
 function eliminarTweet(e) {
   let hijo = e.target;
   let padre = hijo.parentNode;
+  eliminarTweetDelLocalStorage(padre.id);
   padre.remove();
-
 }
 
 function generarNumeroRandom() {
@@ -93,6 +81,13 @@ function imprimirArrayDeTweets(array) {
   for (let i = 0; i < array.length; i++) {
     mostrarTweet(array[i]);
   }
+}
+
+function eliminarTweetDelLocalStorage(tweetId) {
+  let tweetsGuardados = JSON.parse(localStorage.getItem("tweetsGuardados"));
+
+  const nuevoArray = tweetsGuardados.filter((tweet) => tweetId != tweet.id);
+  localStorage.setItem("tweetsGuardados", JSON.stringify(nuevoArray));
 }
 
 console.log(arrayDeTweets);

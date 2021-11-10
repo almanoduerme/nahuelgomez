@@ -8,6 +8,7 @@ let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 let confirm_password = document.querySelector("#confirm_password");
 let singupButton = document.querySelector(".singup__button");
+let body = document.querySelector("#singup");
 
 // MODAL => SINGUP => ON
 
@@ -19,17 +20,13 @@ let singup_link = document.querySelector(".singup_link");
 singupButton.addEventListener("click", modalOn);
 modalClose.addEventListener("click", modalOff);
 
-function validacion() {
-  if (nombre.value == "") {
-    location.reload();
-  } else {
-    localStorage.setItem("userUser", usuario.value);
-  }
-}
+// function validacion() {
+//  Acá va la función para validar el formulario.
+// }
 
 function modalOn() {
-
-  validacion();
+  // validacion();
+  localStorage.setItem("userUser", usuario.value);
 
   modalBg.classList.add("bg-active");
   let datos = document.createElement("p");
