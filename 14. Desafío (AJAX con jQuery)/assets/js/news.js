@@ -46,7 +46,7 @@ $(document).ready(function () {
   });
 });
 
-// API => DOLARSI
+// API => DOLAR SI
 
 let urlNYT = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
 
