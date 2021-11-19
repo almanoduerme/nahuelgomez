@@ -200,6 +200,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .modalWhite {
+    a, p {
+      color: black !important;
+    }
+  }
 }
 
 .modalWhite {
