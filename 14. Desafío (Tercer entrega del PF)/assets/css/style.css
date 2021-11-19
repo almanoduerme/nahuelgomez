@@ -197,6 +197,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .modalContainerON .modalWhite a, .modalContainerON .modalWhite p {
+    color: black !important; }
 
 .modalWhite {
   width: 70%;
@@ -1067,7 +1069,6 @@
     flex-direction: column;
     align-self: start; }
   .btn {
-    background-color: pink;
     font-weight: 700;
     width: 20%;
     margin: 0.2rem; }
@@ -1075,8 +1076,10 @@
     padding: 0 0.2rem; }
   .tweet {
     width: 100%;
-    background-color: pink;
+    background-color: #DBD8E3;
     padding: 0.2rem 0.6rem; }
+    .tweet p {
+      padding: .6rem 0rem !important; }
   #footer {
     width: 100%;
     text-align: center;
@@ -1151,6 +1154,8 @@
   .darkMode #darkMode {
     color: white;
     background-color: #222831; }
+  .darkMode .modalContainerON .modalWhite a, .darkMode .modalContainerON .modalWhite p {
+    color: black !important; }
 
 #darkMode {
   color: black;

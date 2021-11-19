@@ -1375,7 +1375,7 @@
   }
 
   .btn {
-    background-color: pink;
+    // background-color: pink;
     font-weight: 700;
     width: 20%;
     margin: 0.2rem;
@@ -1387,10 +1387,12 @@
 
   .tweet {
     width: 100%;
-    background-color: pink;
+    background-color: #DBD8E3;
     padding: 0.2rem 0.6rem;
+    p {
+    padding: .6rem 0rem !important;
   }
-
+}
   #footer {
     width: 100%;
     text-align: center;
@@ -1510,6 +1512,14 @@
   #darkMode {
     color: white;
     background-color: #222831;
+  }
+
+  .modalContainerON {
+    .modalWhite {
+      a, p {
+        color: black !important;
+      }
+    }
   }
 }
 
